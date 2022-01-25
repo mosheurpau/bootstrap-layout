@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::before {
+            content: 'Hello ';
+            color: lawngreen;
+        }
+
+        h1::after {
+            content: ' gelo';
+            color: lawngreen;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title:hover:before,
+        .section-title::after {
+            content: '';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        }
+
+
+        p>span::after {
+            content: " * ";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Having fun with pseudo vai bongele</h1>
+    <h1>Having fun with pseudo vai bongele</h1>
+
+    <section>
+        <h2 class="section-title">Best Quote</h2>
+        <blockquote>The greatest glory in living lies not in never falling,</blockquote>
+        <blockquote>but in rising every time we fall</blockquote>
+        <blockquote>The way to get started is to quit talking and begin doing.</blockquote>
+    </section>
+    <p>This is paragraph.</p>
+    <p><span>Name</span> <input type="text" required></p>
+    <p>Name <input type="text" required></p>
+</body>
+
+</html>
